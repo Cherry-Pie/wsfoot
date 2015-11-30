@@ -1,0 +1,16 @@
+{
+    "name": "yaro/wsfoot",
+    "description": "wsfoot tt projet",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.0",
+        "yaro/socket": "1.0.*",
+        "symfony/http-foundation": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/app/helpers.php';
+
+$action = isset($argv[1]) ? $argv[1] : '';
+if (!in_array($action, ['start', 'stop', 'restart'])) {
+    die('Wrong command. Allowed: start, stop, restart'. PHP_EOL);
+}
+
+$socket = new Yaro\Socket\Socket();
+$socket->init($action, [
+    'class' => App\Socket\Daemon::class,
+    'pid' => '/tmp/wsfoot.pid',
+    'websocket' => 'tcp://'. App\Config::get('socket_address'),
+]);

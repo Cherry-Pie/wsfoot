@@ -1,0 +1,7 @@
+
+<h1><?= $e->getMessage() ?></h1>
+<h4><?= $e->getFile() ?> @ <?= $e->getLine() ?></h4>
+
+<code>
+	<pre><?= $e->getTraceAsString() ?></pre>
+</code>

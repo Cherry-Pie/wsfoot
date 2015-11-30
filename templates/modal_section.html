@@ -1,0 +1,33 @@
+
+<table>
+<tbody>
+<tr>
+
+
+<?php 
+$lastTier = null;
+foreach ($tickets as $ticket):
+
+    if (!is_null($lastTier) && $lastTier !== $ticket['tier']): ?>
+        </tr><tr>
+        <td class="tier"># <?= $ticket['tier'] ?></td>
+
+    <?php elseif (is_null($lastTier)): ?>
+        <td class="tier"># <?= $ticket['tier'] ?></td>
+
+    <?php endif; ?> 
+    
+    <td id="ticket-id-<?= $ticket['id'] ?>" class="seat <?= $ticket['status'] ?>"
+        data-id="<?= $ticket['id'] ?>">
+        <?= $ticket['seat'] ?>
+    </td>
+
+<?php 
+    $lastTier = $ticket['tier'];
+endforeach;
+?>
+
+
+</tr>
+</tbody>
+</table>

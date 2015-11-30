@@ -1,0 +1,57 @@
+#reserve-btn {
+    float: right;
+    width: 110px;
+}
+.all-available-seats{
+    font-size: 50%;
+    float: right;
+}
+.section {
+    min-width: 15%;
+}
+.sections-wrapper {
+    text-align: center;
+}
+.soccer-field {
+    width: 80%;
+    margin-bottom: 1.5rem;
+}
+.tier {
+    color: #666;
+}
+.seat {
+    cursor: pointer;
+}
+.seat.available:hover,
+.seat.in-progress:hover {
+    box-shadow: inset 0px 0px 20px 2px;
+}
+.seat.active {
+    box-shadow: inset 0px 0px 2px 3px #28FFFF;
+}
+.available {
+    background-color: #080;
+    color: #fff;
+}
+.occupied {
+    background-color: #c22;
+    color: #fff;
+}
+.in-process {
+    background-color: yellow;
+}
+#modal {
+    display: none;
+    z-index: 12;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 30px 100px;
+}
+#modal .modal-close {
+    position: fixed;
+    right: 20px;
+}
