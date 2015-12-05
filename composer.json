@@ -1,7 +1,7 @@
 {
     "name": "yaro/wsfoot",
     "description": "wsfoot tt projet",
-    "license": "MIT",
+    "license": "CC-BY-NC",
     "type": "project",
     "require": {
         "php": ">=5.5.0",
